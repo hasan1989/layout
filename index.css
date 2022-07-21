@@ -1,0 +1,85 @@
+body {
+    margin: 0px;
+    padding: 3vw 3vw 0vw 3vw;
+}
+
+.section1 {
+        display: grid;
+        grid-template-areas: "a b";
+}
+
+.a {grid-area: a; background-color: rgb(5, 95, 95);}
+.b {grid-area: b; background-color: blue;}
+.c {grid-area: c; background-color: aquamarine;}
+.d {grid-area: d; background-color: rgb(19, 190, 190);}
+.e {grid-area: e; background-color: rgb(231, 231, 35);}
+.f {grid-area: f; background-color: rgb(206, 10, 10);}
+.g {grid-area: g; background-color: blanchedalmond;}
+.h {grid-area: h; background-color: blue;}
+.i {grid-area: i; background-color: blueviolet;}
+.j {grid-area: j; background-color: brown;}
+.k {grid-area: k; background-color: burlywood;}
+.l {grid-area: l; background-color: rgb(125, 238, 12);} 
+
+
+.section2 {
+    display: grid;
+    grid-template-areas: "c d e f"
+                         ". g h i"
+                         ". j k l";
+}
+
+
+
+@media (max-width: 800px) {
+    .section1 {
+        grid-template-areas: "a b";
+                             
+    }
+    .section2 {
+        grid-template-areas: "c c"
+                             "d e"
+                             "f g"
+                             "h i"
+                             "j k"
+                             "l .";
+    }
+    .c {
+        grid-template-areas: "ca cb cc";
+       
+    }
+}
+
+@media (max-width: 600px) {
+    .a {
+        
+    }
+    .b {
+        
+    }
+
+    .section1 {
+        grid-template-areas: "a"
+                             "b";
+        text-align: center;
+    }
+    .section2 {
+        grid-template-areas: "c"
+                             "d"
+                             "e"
+                             "f"
+                             "g"
+                             "h"
+                             "i"
+                             "j"
+                             "k"
+                             "l";
+    }
+    .c {
+        grid-template-areas: "ca" 
+                             "cb" 
+                             "cc";
+        
+        justify-items: center;
+    }
+}
